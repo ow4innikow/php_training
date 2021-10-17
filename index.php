@@ -7,7 +7,19 @@
 </head>
 <body>
     <?php
-       require 'point.php';
+
+
+
+    ?>
+</body>
+</html>
+
+
+<?php
+/*
+ *
+ *
+ *    require 'point.php';
 
         $p1 = new Point;
         $p1->x=10;
@@ -20,17 +32,6 @@
     $distance = sqrt(pow(($p2->x-$p1->x),2)
         +pow(($p2->y-$p1->y),2));
     echo $distance;
-
-
-
-    ?>
-</body>
-</html>
-
-
-<?php
-/*
- *
  *
  * echo pow(2,8); // 256
         echo sqrt(16);// 4

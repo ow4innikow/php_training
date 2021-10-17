@@ -7,9 +7,115 @@
 </head>
 <body>
     <?php
+       require 'point.php';
 
-//
+        $p1 = new Point;
+        $p1->x=10;
+        $p1->y=34;
 
+       $p2 = new Point;
+       $p2->x=3;
+       $p2->y=10;
+        // высчитать растояние между двумя точками
+    $distance = sqrt(pow(($p2->x-$p1->x),2)
+        +pow(($p2->y-$p1->y),2));
+    echo $distance;
+
+
+
+    ?>
+</body>
+</html>
+
+
+<?php
+/*
+ *
+ *
+ * echo pow(2,8); // 256
+        echo sqrt(16);// 4
+ *
+ *  require 'point.php';
+
+        $first = new Point;
+        $first->x=3;
+        $first->y=3;
+
+        $second = clone $first;// клонирование
+        $second->x=5;
+        $second->y=5;
+
+        echo "x: {$first->x}, y: {$first->y}"; // x: 3, y: 3
+        echo "<br>";
+        echo "x: {$second->x}, y: {$second->y}"; // x: 5, y: 5
+ *
+ * require 'point.php';
+
+        $first = new Point;
+        $first->x=3;
+        $first->y=3;
+
+        $second = $first;
+        $second->x=5;
+        $second->y=5;
+
+        echo "x: {$first->x}, y: {$first->y}"; // x: 5, y: 5
+        echo "<br>";
+        echo "x: {$second->x}, y: {$second->y}"; // x: 5, y: 5
+ *
+ *  $first = $second = 2;
+        $first = 3;
+        echo $first . '<br>' . $second . '<br>'; // 3 2
+ *
+ *  $one = 5;
+        $two = &$one;// ссылка
+        $two = 3;// изменили вторую переменную и первая по ссылке изменилась
+        echo '<br>' . $one; // 3 потому что применена ссылка
+ *
+ */  //require 'point.php'; */
+ /* class Point{
+                                public $x;
+                                public $y;
+                                 public static $num= 120; */
+  /*
+       $point1 = new Point();
+       $point1->x = 13;
+       $point1->y = 2;
+       echo $point1->x;
+
+    $point2 = new Point;
+    $point2->x = 11;
+    $point2->y = 47;
+    echo $point2->x;
+
+    unset($point2);//unset() удаляет перечисленные переменные.
+    echo $point2->x;//ничего не выведется кроме ошибки
+
+    echo Point::$num; // вызвали статик переменную
+ */
+/* // ceil округляет дробь к большему целому числу
+    echo ceil(4.3); // 5
+ *
+     echo round(21.43893482, 2); // округление чисел до 2го знака после запятой
+
+ *
+ // явное приведение типов
+    $float = 4.3;
+    echo $number = (int)$float;// приведение к целому типу 4
+    echo $number = (integer)$float;// приведение к целому типу 4
+    echo $number = (bool)$float;// приведение к boolean
+    echo $number = (boolean)$float;// приведение к boolean
+    echo $number = (float)$float;// приведение к double
+    echo $number = (double)$float;// приведение к double
+    echo $number = (real)$float;// приведение к double
+    echo $number = (string)$float;// приведение к строке
+    echo $number = (array)$float;// приведение к массиву
+    echo $number = (object)$float;// приведение к обьекту
+ *
+  echo true;// преобразуется в единицу
+        echo false;// преобразется в пустую строку
+ *
+ // преобразование к логическому типу
     $var = NULL; // 0.0  0 "0" '' NULL - это все будет false
     if($var){
         echo 'переменная $var рассматривается как true';
@@ -25,21 +131,8 @@
     else {
         echo 'переменная $var рассматривается как false';
     }
-
-
-
-    ?>
-</body>
-</html>
-
-
-<?php
-/*
  *
- *
- *
- *
-// преобразование к числу
+// преобразование к числу (неявное приведение типов)
     $str = '45.2';
     $number = $str - 12;
     echo $number; // 33.2

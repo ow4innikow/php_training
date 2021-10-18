@@ -3,21 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= 'Новая страница'?></title>
+    <title><?= 'Самообучение' ?></title>
 </head>
-<body>
+<!--<meta http-equiv="refresh" content=3> <!-- Refresh every 2 sec -->-->
+<body bgcolor="#d3d3d3"><H1>
     <?php
 
 
 
+
+
     ?>
-</body>
+</H1></body>
 </html>
-
-
 <?php
 /*
  *
+ *
+ *
+ */
+
+// /* // условный оператор if
+//    if(/*условие*/){
+//        //любой код
+//    }
+//    else{
+//        //любой код
+//    }; */
+
+ /* // операторы сравнения // оно не выводится
+    $x = 1;
+    $y = '1';
+
+    echo $x < $y; '<br>';
+    echo $x <= $y; '<br>';
+    echo $x > $y; '<br>';
+    echo $x >= $y; '<br>';
+
+    echo $x == $y; '<br>';
+    echo $x != $y; '<br>';
+    echo $x <> $y; '<br>';
+    echo $x === $y; '<br>';
+    echo $x !== $y; '<br>';
+
+    echo $x <=> $y; '<br>';// возвращает числовое значение
+ *
+ * // поразрядные операторы
+      echo ~45; // -46
+ *
+ * $var = 3;
+        echo $var++; // 3 постфикс
+        echo"<br>";
+        echo $var++;// 4
+        echo"<br>";
+        echo ++$var; // 6 префиксная запись
+ *
+ *  // 4 - хитрый способ извлечения корня
+        echo 16 ** 0.5;
+ * // больше чем арифметика
+    echo 4 ** 3; // 64 возведение в степень
+    echo"<br>";
+    echo 8 % 3;// 2 остаток от деления
+    echo"<br>";
+    echo (int) (8 % 3); //2 целая часть от деления
+    echo"<br>";
+ *
+ * // оператор точка . конкатенация строк
+    $num = 7;
+    $num .= '+5';
+    echo 'выводим на экран число ' . $num . ' другой текст' . '<br>'; // выводим на экран число 7+5 другой текст
+    echo 'выводим на экран число ' , $num , ' другой текст'; // выводим на экран число 7+5 другой текст
+
+ *
+ *  class ConstClass{
+             const NAME = 'str';
+         }
+         if(defined('ConstClass::POS')){
+             echo 'Константа определена';
+         }
+         else {
+             echo 'Константа НЕопределена'; // Константа НЕопределена
+         }
+ *
+ *  class ConstClass{
+             const NAME = 'str';
+         }
+         if(defined('ConstClass::NAME')){
+             echo 'Константа определена';// Константа определена
+         }
+ *
+ *   //служебные константы
+    echo 'Путь к файлу: ' . __DIR__ . '<br>'; // Путь к файлу: C:\xampp\htdocs\php_training
+
+    require_once '../lesson13/point.php';// указания относительного пути выйти на папку вверх и зайти в папку
+
+ *
+ *
+ *  //служебные константы
+    echo 'имя файла где написан скрипт' .  __FILE__ . '<br>';
+    echo 'номер строки где произошел вызов LINE ' . __LINE__ . '<br>';
+ *
+ * // константы
+    define('NUMBER', 'Hello World');
+    echo NUMBER; // Hello World
+    echo Number; // Warning
+
+    echo constant('NUMBER'); // Hello World
+
+// создание контастант на лету
+    $num = mt_rand(1,10);// здесь какой то число рандомно создается
+    $name = "VALUE($num)";//
+    define($name, $num);//
+    echo constant($name);//
+ *
+ *   class Point{
+        public $x;
+        public $y;
+        public static $num = 120;
+
+    }
+echo Point::$num;// 120 -обращение к статической переменной
+ *
+ *  // области видимости
+    class Point{
+        public $x;
+        private $y;
+        protected $z;
+
+    }
  *
  *    require 'point.php';
 
@@ -194,6 +307,3 @@
  *
     echo  'Hello World';
  */
-
-
-

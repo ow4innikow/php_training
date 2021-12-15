@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= 'Самообучение' ?></title>
 </head>
-<!--<meta http-equiv="refresh" content=3> <!-- Refresh every 2 sec -->-->
+<meta http-equiv="refresh" content=3> <!-- Refresh every 2 sec -->
 <body bgcolor="#d3d3d3"><H1>
     <?php
-
-
-
-
-
+        // тернарный оператор
+    //выражение1 ? выражение2 : выражение3
+    $x = -45;
+    $x = $x < 0 ? -$x : $x; // получить абсольтное знаение какого то числа
+    echo $x;
     ?>
 </H1></body>
 </html>
@@ -21,6 +21,26 @@
  *
  *
  *
+ *
+ *
+ *
+   $num = 5;
+        if($num>0 && $num<8){
+            echo "0<{$num}<8";
+        } // 0<5<8
+ *
+ *   if(true){
+            echo "Истина";
+        }
+        elseif (){
+
+        }
+        elseif(){
+
+        }
+        else{
+
+        }
  */
 
 // /* // условный оператор if
